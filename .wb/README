@@ -1,0 +1,11 @@
+env/gitignore:
+
+Copiar .env.example para .env
+Preencher com seus próprios valores
+
+## Configuração do ambiente
+
+1. Clone o repositório
+2. Execute `composer install`
+3. Copie `.env.example` para `.env`
+4. Edite o arquivo `.env` com suas configurações locais

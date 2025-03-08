@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WB Manutenção</title>
+    <style>
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #004080;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+
+        /* Map Card Styles */
+        .map-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 500px;
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 0.5s forwards; /* Fade-in animation */
+            margin: 20px auto; /* Center the cards horizontally */
+        }
+
+        .map-card-header {
+            background-color: #004080;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .map-card iframe {
+            width: 100%;
+            height: 300px; /* Adjust the height of the map inside the card */
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .drop {
+            position: relative;
+            display: inline-block;
+            width: 80%;
+            max-width: 300px;
+            margin: 0 auto; /* Center the dropdown button */
+        }
+
+        .drop-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .drop button {
+            background-color: #004080;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 0 auto;
+        }
+
+        .drop-content a {
+            color: black;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .drop-content a:hover {
+            border-radius: 5px;
+            background-color: #ddd;
+        }
+
+        .drop:hover .drop-content {
+            display: block;
+        }
+
+        /* Center content for form and map section */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 100px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            background-color: #004080;
+            color: white;
+        }
+
+        /* Contact Info Card Styles */
+        .contact-info-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .contact-info-card h2 {
+            color: #004080;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info-card p {
+            font-size: 16px;
+            color: #333;
+            margin: 8px 0;
+        }
+
+        .contact-info-card p a {
+            color: #004080;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info-card p a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info-card strong {
+            color: #004080;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .contact-info-card {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="logo">
+            <img src="imagem/image.png" alt="WB Manutenção">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="empresa.html">Empresa</a></li>
+            <li class="dropdown">
+                <a href="#">Áreas de Negócio</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./automacaoindustrial.html">Automação Industrial</a></li>
+                    <li><a href="./LocacaoDeEquipamento.html">Locacão De Equipamento</a></li>
+                    <li><a href="./Topografia.html">Topografia</a></li>
+                    
+                    <li class="dropdown">
+                      <a href="#">Manutenção Industrial</a>
+                      <ul class="dropdown-submenu">
+                          <li><a href="./manutencaoEletrica.html">Manutenção Elétrica</a></li>
+                          <li><a href="./manutencaoMecanica.html">Manutenção Mecânica</a></li>
+                          <li><a href="./tubulacoes.html">Tubulações</a></li>
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#">Trabalho Civil</a>
+                    <ul class="dropdown-submenu">
+                        <li><a href="./TrabalhoCivil/Alvenaria.html">Alvenaria</a></li>
+                        <li><a href="./TrabalhoCivil/BaseEstrutural.html">Base Estrutural</a></li>
+                        <li><a href="./TrabalhoCivil/Pintura.html">Pintura</a></li>
+                        <li><a href="./TrabalhoCivil/PisoEstrutural.html">Piso Estrutural</a></li>
+                        <li><a href="./TrabalhoCivil/Montagemandaime.html">Montagem Andaime</a></li>
+      
+                        
+                    </ul>
+                </li>
+                  
+                </ul>
+            </li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li class="dropdown">
+              <a href="#">Contato</a>
+              <ul class="dropdown-menu">
+                  <li><a href="./contato.html">Contato</a></li>
+                  <li class="dropdown">
+                  <li><a href="./trabalhe.html">Trabalhe-Conosco</a></li>
+              </ul>
+          </li>
+        </ul>
+    </nav>
+
+    <br><br>
+    <!-- Map Section -->
+    <div class="drop">
+        <button onclick="toggleDrop()">Selecionar Localização</button>
+        <div class="drop-content">
+            <a href="#" onclick="showMap(1)">Três Lagoas</a>
+            <a href="#" onclick="showMap(2)">Corumbá</a>
+        </div>
+    </div>
+
+    <!-- Map and Info Cards -->
+    <div id="map1" class="map-container map-card" style="display:none;">
+        <div class="map-card-header">Três Lagoas</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3730.748932494767!2d-51.69632474981587!3d-20.760967869977293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949098976e334de5%3A0xa279d7078af6192d!2sR.+Jo%C3%A3o+Silva%2C+3498+-+Centro%2C+Tr%C3%AAs+Lagoas+-+MS%2C+79645-010!5e0!3m2!1spt-BR!2sbr!4v1447702875690" allowfullscreen></iframe>
+    </div>
+    <div id="info1" class="contact-info-card" style="display:none;">
+        <h2>Três Lagoas</h2>
+        <p>Entre em contato com nossa equipe de suporte em Três Lagoas.</p>
+        <p><strong>(11) 4700-3260</strong></p>
+        <p><strong>Três Lagoas: 8h-21h, de segunda a sexta</strong></p>
+        <p><strong>Diretório global</strong></p>
+        <p><a href="https://wa.me/556799299440">Conversar agora no WhatsApp</a></p>
+    </div>
+
+    <div id="map2" class="map-container map-card" style="display:none;">
+        <div class="map-card-header">Corumbá</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.15281399039!2d-57.66134872821996!3d-19.01298677099929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a842946b1e6b5b%3A0x8c42590b2672a0b!2sRua+Dom+Pedro+II%2C+Corumb%C3%A1%2C+Mato+Grosso+do+Sul!5e0!3m2!1spt-BR!2sbr!4v1651550243483" allowfullscreen></iframe>
+    </div>
+    <div id="info2" class="contact-info-card" style="display:none;">
+        <h2>Corumbá</h2>
+        <p>Entre em contato com nossa equipe de suporte em Corumbá.</p>
+        <p><strong>(67) 99294-9400</strong></p>
+        <p><strong>Corumbá: 8h-21h, de segunda a sexta</strong></p>
+        <p><strong>Diretório global</strong></p>
+        <p><a href="https://wa.me/556799299440">Conversar agora no WhatsApp</a></p>
+    </div>
+
+
+    <div class="contact-form-container">
+        <h2>Entre em Contato</h2>
+        <form action="../SITE_WB/admin/contact/processcontact.php" method="POST">
+            <div class="form-group">
+                <label for="company_name">Nome da Empresa:</label>
+                <input type="text" id="company_name" name="company_name" required>
+            </div>
+            <div class="form-group">
+                <label for="contact_name">Nome do Contato:</label>
+                <input type="text" id="contact_name" name="contact_name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+    <br>
+    <br>
+    
+    <footer>
+        <p>&copy; 2025 WB Manutenção | Todos os direitos reservados.</p>
+        <br>
+
+        <a href="http://www.sitefy.com.br" style="display: inline-block; margin-right: 7px;">
+            <img src="imagem/sitefy.png" alt="Sitefy" style="width: 50px;">
+        </a>
+
+        <a href="https://wa.me/556799299440" style="display: inline-block;">
+            <img src="./imagem/whatsapp.png" alt="Iconi" style="width: 30px;">
+        </a>
+        <br><br>
+        <a href="https://www.google.com/search?q=R.+Jo%C3%A3o+Silva%2C+3498%2C+79645-010&oq=R.+Jo%C3%A3o+Silva%2C+3498%2C+79645-010&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABiABBiiBDIKCAIQABiABBiiBDIKCAMQABiABBiiBDIKCAQQABiABBiiBDIKCAUQABiABBiiBNIBBzU5NGowajSoAgCwAgE&sourceid=chrome&ie=UTF-8">
+            <p>R. João Silva, 3498, 79645-010 </p>
+            <a href="">
+                <img src="imagem/telephone.png" alt="WhatsApp" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 3px;">
+                (67) 3522-7228
+            </a>
+        </a>
+    </footer>
+
+    <!-- Ícone do WhatsApp na parte inferior esquerda -->
+    <a class="whatsapp-link" href="https://api.whatsapp.com/send/?phone=556799299440" target="_blank" style="position: fixed; left: 20px; bottom: 20px;">
+        <img src="imagem/whatsapp.png" alt="WhatsApp" style="width: 60px; height: 60px;">
+    </a>
+
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        function showMap(mapNumber) {
+            // Hide both map and info cards
+            document.getElementById('map1').style.display = 'none';
+            document.getElementById('map2').style.display = 'none';
+            document.getElementById('info1').style.display = 'none';
+            document.getElementById('info2').style.display = 'none';
+            
+            // Show selected map and info card
+            if (mapNumber === 1) {
+                document.getElementById('map1').style.display = 'block';
+                document.getElementById('info1').style.display = 'block';
+            } else if (mapNumber === 2) {
+                document.getElementById('map2').style.display = 'block';
+                document.getElementById('info2').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

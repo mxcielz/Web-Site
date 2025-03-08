@@ -1,0 +1,296 @@
+/* Variáveis de cores e estilos */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-light: #ffffff;
+    --background-dark: #1a1a1a;
+    --text-light: #333333;
+    --text-dark: #ffffff;
+    --border-color: #e0e0e0;
+    --hover-color: rgba(211, 211, 211, 0.5);
+    --shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Formulário */
+.form-container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    background: var(--background-light);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.form-container h2 {
+    color: var(--text-light);
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    transition: var(--transition);
+    background: var(--background-light);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group input[type="submit"] {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.form-group input[type="submit"]:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.form-group input[type="file"] {
+    padding: 10px;
+    border: 2px dashed var(--border-color);
+    background: #f8f9fa;
+    cursor: pointer;
+}
+
+/* Efeitos de Hover */
+.hover-effect {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: var(--transition);
+    font-size: 14px;
+    color: var(--text-light);
+    gap: 8px;
+}
+
+.hover-effect:hover {
+    background: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+.icon {
+    font-size: 20px;
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+/* Profile Menu */
+.profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    transition: var(--transition);
+    object-fit: cover;
+}
+
+.profile img:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.profile-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    background: var(--background-light);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+}
+
+.profile-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.profile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-menu ul li {
+    padding: 12px 20px;
+    transition: var(--transition);
+}
+
+.profile-menu ul li a {
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.profile-menu ul li:hover {
+    background: var(--hover-color);
+}
+
+/* Modo Escuro */
+body.dark {
+    --background-light: var(--background-dark);
+    --text-light: var(--text-dark);
+    --border-color: #2d2d2d;
+    --hover-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark #loader {
+    background: rgba(0, 0, 0, 0.95);
+}
+
+body.dark .form-container {
+    background: var(--background-dark);
+}
+
+body.dark .form-group input,
+body.dark .form-group select {
+    background: var(--background-dark);
+    border-color: var(--border-color);
+    color: var(--text-dark);
+}
+
+body.dark .form-group input[type="file"] {
+    background: #2d2d2d;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .form-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .form-group input[type="submit"] {
+        padding: 12px;
+    }
+
+    .profile-menu {
+        width: 180px;
+    }
+}
+
+/* Animações */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container {
+    animation: slideIn 0.5s ease;
+} 
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.delete-btn,
+.edit-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.edit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Status colors for user levels */
+.status.admin {
+    background: #1abc9c;
+}
+
+.status.funcionario {
+    background: #3498db;
+}
+
+.status.rh {
+    background: #9b59b6;
+}
+
+.status.visitante {
+    background: #95a5a6;
+}
+

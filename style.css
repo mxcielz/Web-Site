@@ -1,0 +1,153 @@
+/* Estilo do wrapper principal */
+.content.wrapper {
+    font-family: 'Open Sans', sans-serif; /* Usando Open Sans para texto adicional */
+    background: #ffffff;
+    padding: 80px 50px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Container central */
+.content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    gap: 40px;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para a coluna de texto */
+.leftCol {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 50%;
+    color: #333;
+    text-align: justify;
+    letter-spacing: 0.5px;
+    padding-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.leftCol p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Estilo para a coluna de imagens */
+.rightCol {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 50%;
+    text-align: center;
+}
+
+/* Estilo para as imagens */
+.image-title img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para as imagens ao passar o mouse */
+.image-title img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .leftCol, .rightCol {
+        max-width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .leftCol {
+        font-size: 18px;
+    }
+
+    .image-title img {
+        max-width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+}
+
+
+        /* Estilo para o modal */
+        .modal {
+            display: none; /* Inicialmente oculto */
+            position: fixed;
+            z-index: 1; /* Fica em cima de outros elementos */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out; /* Efeito de fade-in */
+        }
+
+        .modal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        /* Imagem no modal */
+        .modal-content {
+            max-width: 80%;
+            max-height: 80%;
+            margin: auto;
+            border-radius: 10px;
+            transform: scale(0.8);
+            transition: transform 0.5s ease; /* Efeito de zoom */
+        }
+
+        .modal-content.show {
+            transform: scale(1);
+        }
+
+        /* Estilo do botão de fechar */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #f1f1f1;
+            text-decoration: none;
+            cursor: pointer;
+        }

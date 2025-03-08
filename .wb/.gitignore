@@ -1,0 +1,23 @@
+# Dependências e bibliotecas
+/vendor/
+/node_modules/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Arquivos de configuração locais
+*.local.php
+
+# Arquivos de cache e logs
+/logs/
+/cache/
+*.log
+
+# Arquivos de IDE e editor
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slideshow</title>
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <style>
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css?family=Muli:300, 400');
+
+img {
+    max-width: 5000%;
+    height: auto;
+    vertical-align: top;
+}
+
+@keyframes transformYBanner {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes transformXLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes transformXRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes transformYTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes transformYBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Animações diferentes para cada hero-banner */
+.hero-1 .hero-picture {
+    animation-name: transformXLeft, transformPicture;
+    animation-duration: 900ms, 1900ms;
+    animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+    animation-fill-mode: backwards;
+}
+
+.hero-2 .hero-picture {
+    animation-name: transformYTop, transformPicture;
+    animation-duration: 900ms, 1900ms;
+    animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+    animation-fill-mode: backwards;
+}
+
+.hero-3 .hero-picture {
+    animation-name: transformXRight, transformPicture;
+    animation-duration: 900ms, 1900ms;
+    animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+    animation-fill-mode: backwards;
+}
+
+/* Para a hero-head (títulos) */
+.hero-1 .hero-head {
+    animation-name: transformYBanner;
+    animation-duration: 900ms;
+    animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.hero-2 .hero-head {
+    animation-name: transformYBanner;
+    animation-duration: 1200ms;
+    animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.hero-3 .hero-head {
+    animation-name: transformYBanner;
+    animation-duration: 1500ms;
+    animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.hero-banner {
+    display: grid;
+    width: 90%;
+    max-width: 1200px;
+    padding: 2rem;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(3, minmax(100px, 1fr)); /* Três colunas no layout */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    scrollbar-color: #eee;
+    scrollbar-width: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-banner::-webkit-scrollbar {
+    height: 6px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.hero-banner::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 100px;
+}
+
+.hero-banner::-webkit-scrollbar-thumb {
+    background-color: #eee;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr; /* Para telas menores, empilha os itens */
+    grid-template-rows: auto auto;
+    overflow: hidden;
+    justify-items: center; /* Centraliza o conteúdo da grid */
+}
+
+.hero-head {
+    position: relative;
+    z-index: 2;
+    grid-column: 1 / 2;
+    grid-row: 2;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    background-color: white;
+    animation-name: transformYBanner;
+    animation-duration: 900ms;
+    animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+    animation-fill-mode: backwards;
+    text-align: center; /* Centraliza o texto */
+}
+
+.hero-picture {
+    width: 100%;
+    height: 250px; /* Ajuste a altura conforme necessário */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra toda a área sem distorcer */
+}
+
+.hero-picture::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #004080;
+    opacity: 1;
+    z-index: 1;
+    transform: translateX(101%);
+    animation-name: opacity, transformOverlay;
+    animation-duration: 300ms, 1400ms;
+    animation-fill-mode: backwards;
+    animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.picture {
+    width: 100%;
+    opacity: 1;
+    animation-name: opacity, transformPicture;
+    animation-duration: 1000ms, 1900ms;
+    animation-fill-mode: backwards;
+    animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.heading, .hero-description {
+    animation-name: transformY, opacity;
+    animation-duration: 900ms, 700ms;
+    animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+    animation-fill-mode: backwards;
+}
+
+.heading {
+    font-family: "Merriweather";
+    color: inherit;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+}
+
+.hero-description {
+    font-size: .9rem;
+    font-weight: 300;
+    color: #999;
+    font-style: italic;
+}
+
+.view-more-btn {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #003366;
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        grid-template-columns: 1fr; /* Coloca os itens em uma coluna única em telas pequenas */
+        padding: 1rem;
+    }
+
+    .hero-head {
+        text-align: center; /* Garante que o texto fique centralizado em dispositivos menores */
+    }
+}
+
+  </style>
+</head>
+<body>
+    <nav>
+        <div id="logo">
+            <img src="imagem/image.png" alt="WB Manutenção">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="empresa.html">Empresa</a></li>
+            <li class="dropdown">
+                <a href="#">Áreas de Negócio</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./automacaoindustrial.html">Automação Industrial</a></li>
+                    <li><a href="./LocacaoDeEquipamento.html">Locacão De Equipamento</a></li>
+                    <li><a href="./Topografia.html">Topografia</a></li>
+                    
+                    <li class="dropdown">
+                      <a href="#">Manutenção Industrial</a>
+                      <ul class="dropdown-submenu">
+                          <li><a href="./manutencaoEletrica.html">Manutenção Elétrica</a></li>
+                          <li><a href="./manutencaoMecanica.html">Manutenção Mecânica</a></li>
+                          <li><a href="./tubulacoes.html">Tubulações</a></li>
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#">Trabalho Civil</a>
+                    <ul class="dropdown-submenu">
+                        <li><a href="./TrabalhoCivil/Alvenaria.html">Alvenaria</a></li>
+                        <li><a href="./TrabalhoCivil/BaseEstrutural.html">Base Estrutural</a></li>
+                        <li><a href="./TrabalhoCivil/Pintura.html">Pintura</a></li>
+                        <li><a href="./TrabalhoCivil/PisoEstrutural.html">Piso Estrutural</a></li>
+                        <li><a href="./TrabalhoCivil/Montagemandaime.html">Montagem Andaime</a></li>
+      
+                        
+                    </ul>
+                </li>
+                  
+                </ul>
+            </li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li class="dropdown">
+              <a href="#">Contato</a>
+              <ul class="dropdown-menu">
+                  <li><a href="./contato.html">Contato</a></li>
+                  <li class="dropdown">
+                  <li><a href="./trabalhe.html">Trabalhe-Conosco</a></li>
+              </ul>
+          </li>
+        </ul>
+    </nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <div class="hero-banner">
+                <div class="hero hero-1">
+                    <div class="hero-picture">
+                        <img src="imagem/ManutençaoEletrica/montagem-de-painel-eletrico-1.jpg" class="picture" />
+                    </div>
+                    <div class="hero-head">
+                        <h1 class="heading">Paineis CCM</h1>
+                        <p class="hero-description">Os "Painéis CCM" são usados para controlar e monitorar máquinas em indústrias, ajudando a garantir que elas funcionem de forma segura e eficiente.</p>
+                        <button class="view-more-btn" onclick="window.location.href='ManutençaoEletrica/PaineisCCM.html'">Ver mais</button>
+                    </div>
+                </div>
+                <div class="hero hero-2">
+                    <div class="hero-picture">
+                        <img src="imagem/ManutençaoEletrica/baixaEmedia.jpg" class="picture" />
+                    </div>
+                    <div class="hero-head">
+                        <h1 class="heading">Rede Media Alta</h1>
+                        <p class="hero-description">A "Rede Média Alta" é um tipo de rede elétrica que transmite energia em tensões mais altas, geralmente entre 1 kV e 36 kV. Ela é usada para distribuir energia de forma eficiente em áreas maiores, como cidades e regiões industriais.</p>
+                        <button class="view-more-btn" onclick="window.location.href='ManutençaoEletrica/RedeMediaAlta.html'">Ver mais</button>
+                    </div>
+                </div>
+                <div class="hero hero-3">
+                    <div class="hero-picture">
+                        <img src="imagem/ManutençaoEletrica/transformador oleo e seco.png" class="picture" />
+                    </div>
+                    <div class="hero-head">
+                        <h1 class="heading">Transformadores</h1>
+                        <p class="hero-description">Os "Transformadores" são equipamentos que alteram a tensão da energia elétrica, podendo aumentar ou diminuir a voltagem para facilitar o transporte e uso da eletricidade.</p>
+                        <button class="view-more-btn" onclick="window.location.href='ManutençaoEletrica/Transformadores.html'">Ver mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<footer>
+  <p>&copy; 2025 WB Manutenção | Todos os direitos reservados.</p>
+  <br>
+  <a href="http://www.sitefy.com.br" style="display: inline-block; margin-right: 7px;">
+    <img src="imagem/sitefy.png" alt="Sitefy" style="width: 50px;">
+  </a>
+  <a href="https://wa.me/556799299440" style="display: inline-block;">
+    <img src="./imagem/whatsapp.png" alt="Iconi" style="width: 30px;">
+  </a>
+  <br><br>
+  <a href="https://www.google.com/search?q=R.+Jo%C3%A3o+Silva%2C+3498%2C+79645-010&oq=R.+Jo%C3%A3o+Silva%2C+3498%2C+79645-010&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABiABBiiBDIKCAIQABiABBiiBDIKCAMQABiABBiiBDIKCAQQABiABBiiBDIKCAUQABiABBiiBNIBBzU5NGowajSoAgCwAgE&sourceid=chrome&ie=UTF-8">
+    <p>R. João Silva, 3498, 79645-010 </p>
+    <a href="">
+      <img src="imagem/telephone.png" alt="WhatsApp" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 3px;">
+      (67) 3522-7228
+    </a>
+  </a>
+</footer>
+
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<script src="assets/js/jquery.collapse.js"></script>
+<script src="assets/js/jquery.slicknav.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const descriptionDiv = document.getElementById('description');
+const toggleBtns = document.querySelectorAll('.toggle-btn');
+
+for (const slide of slides) {
+  slide.addEventListener('click', () => {
+    clearActiveClasses();
+    slide.classList.add('active');
+    descriptionDiv.textContent = slide.getAttribute('data-description');
+    descriptionDiv.style.display = 'block'; // Show the description
+    setTimeout(() => {
+      descriptionDiv.classList.add('show'); // Trigger the animation after a short delay
+    }, 10); // Delay added for smoother animation
+  });
+}
+
+toggleBtns.forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();  // Prevents the click event on the slide from triggering
+    const moreText = this.previousElementSibling; // Selects the .more-text div
+    moreText.classList.toggle('show'); // Toggles visibility of additional text
+    if (moreText.classList.contains('show')) {
+      this.textContent = "Ver menos";  // Changes button text to "Ver menos"
+    } else {
+      this.textContent = "Ver mais";  // Changes button text to "Ver mais"
+    }
+  });
+});
+
+function clearActiveClasses() {
+  slides.forEach((slide) => {
+    slide.classList.remove('active');
+  });
+  descriptionDiv.classList.remove('show'); // Hide the description with animation
+}
+
+
+</script>
+</body>
+</html>
