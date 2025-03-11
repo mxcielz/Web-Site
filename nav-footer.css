@@ -1,0 +1,763 @@
+/* Estilos do Navbar */
+nav {
+    background: rgba(17, 97, 177, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 5px 40px; /* Adjusted padding */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 90px; /* Set initial height */
+}
+
+nav.scrolled {
+    padding: 5px 30px; /* Adjusted padding */
+    background: rgba(17, 97, 177, 0.419);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    height: 70px; /* Reduced height when scrolled */
+}
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; /* Make nav-container fill the nav height */
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    height: 95px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+nav.scrolled #logo img {
+    height: 65px;
+}
+nav ul {
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+nav ul li a.active {
+    color: #004080;
+    background: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+}
+
+/* Estilos do Footer */
+.footer {
+    background: linear-gradient(135deg, #003366 0%, #004080 100%);
+    color: #fff;
+    padding: 50px 0 20px;
+    position: relative;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer-brand {
+    text-align: center;
+}
+
+.footer-logo {
+    max-width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.footer h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: #0066cc;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-info-item:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.footer-info-item i {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.footer-info-item:hover i {
+    background: #0066cc;
+}
+
+.address-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.address-link:hover {
+    color: #fff;
+}
+
+.address-text {
+    text-align: left;
+}
+
+.address-text p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #0066cc;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-developer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-developer img {
+    height: 30px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-developer img:hover {
+    opacity: 1;
+}
+
+/* Responsividade do Footer */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .address-link {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .address-text {
+        text-align: center;
+    }
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: rgb(13, 93, 167);
+    min-width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid rgba(17, 97, 177, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+    position: relative;
+    margin: 3px 0;
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    padding: 12px 16px;
+    color: #e7e7e7;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(190, 196, 203, 0.335);
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+/* Submenu - para os itens específicos que devem cair para o lado */
+.dropdown-menu .dropdown > .dropdown-submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: rgb(13, 93, 167);
+    min-width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 10px;
+    margin-top: 0;
+    margin-left: 5px;
+    border: 1px solid rgba(17, 97, 177, 0.1);
+    transform: translateX(10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu .dropdown:hover > .dropdown-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Ajuste da seta para submenus laterais */
+.dropdown-menu .dropdown > a::after {
+    content: '\f105';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    font-size: 0.85em;
+    opacity: 0.7;
+}
+
+.dropdown-menu .dropdown:hover > a::after {
+    transform: translateY(-50%) rotate(90deg);
+    opacity: 1;
+}
+
+/* Ícones e setas */
+.dropdown > a::after {
+    content: '\f107';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: 5px;
+    font-size: 0.85em;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu li a i,
+.dropdown-submenu li a i {
+    font-size: 1em;
+    width: 20px;
+    text-align: center;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu li a:hover i,
+.dropdown-submenu li a:hover i {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .nav-container {
+        height: 70px;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(17, 97, 177, 0.98);
+        padding: 15px;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 12px 20px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .dropdown-menu,
+    .dropdown-submenu {
+        position: static;
+        transform: none !important;
+        width: 100%;
+        min-width: 100%;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: none;
+        border: none;
+        margin: 5px 0;
+        padding: 5px 0;
+        display: none;
+    }
+    
+    .dropdown:hover > .dropdown-menu,
+    .dropdown-menu .dropdown:hover > .dropdown-submenu {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .dropdown-submenu {
+        margin-left: 20px !important;
+        margin-top: 0 !important;
+        border-left: 2px solid rgba(255, 255, 255, 0.1);
+        padding-left: 15px;
+    }
+    
+    .dropdown-menu li,
+    .dropdown-submenu li {
+        width: 100%;
+    }
+    
+    .dropdown-menu li a,
+    .dropdown-submenu li a {
+        color: rgba(255, 255, 255, 0.9);
+        padding: 12px 15px;
+        width: 100%;
+    }
+
+    .dropdown > a::after {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+/* Animação de entrada dos itens do menu */
+@keyframes menuItemFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav ul li {
+    animation: menuItemFade 0.5s ease forwards;
+    opacity: 0;
+}
+
+nav ul li:nth-child(1) { animation-delay: 0.1s; }
+nav ul li:nth-child(2) { animation-delay: 0.2s; }
+nav ul li:nth-child(3) { animation-delay: 0.3s; }
+nav ul li:nth-child(4) { animation-delay: 0.4s; }
+nav ul li:nth-child(5) { animation-delay: 0.5s; }
+nav ul li:nth-child(6) { animation-delay: 0.6s; }
+
+/* Estilo do botão de login */
+.login-btn {
+    background: linear-gradient(45deg, #004080, #0066cc);
+    color: white !important;
+    padding: 6px 16px !important;
+    border-radius: 20px !important;
+    margin-left: 10px;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(0, 64, 128, 0.2);
+    font-size: 0.9rem !important;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 64, 128, 0.3);
+    background: linear-gradient(45deg, #0052a3, #0077e6) !important;
+}
+
+.login-btn i {
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+.login-btn:hover i {
+    transform: translateX(-2px);
+}
+
+/* Ajustes nos ícones do dropdown */
+.dropdown > a .fa-chevron-down {
+    font-size: 0.8em;
+    margin-left: 5px;
+    opacity: 0.7;
+}
+
+/* Efeito de hover nos itens do menu */
+nav ul li a:hover {
+    transform: translateY(-1px);
+}
+
+/* Ajuste no espaçamento dos ícones */
+.dropdown-menu li a i,
+.dropdown-submenu li a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* Efeito de hover nos dropdowns */
+.dropdown-menu li a:hover i,
+.dropdown-submenu li a:hover i {
+    opacity: 1;
+    transform: scale(1.1);
+}
+/* Banner Principal */
+.home-highlight {
+    position: relative;
+    height: 70vh; /* Adjusted height */
+    background: #004080;
+    overflow: hidden;
+    padding-top: 80px;
+    margin-top: 0;
+    min-height: 70vh; /* Adjusted min-height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-slide {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+    transform: scale(1); /* Add this line to reset any scaling */
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,64,128,0.9), rgba(0,102,204,0.8));
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 0 50px; /* Adjusted padding */
+    animation: fadeInUp 1s ease;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.banner-content h1 {
+    font-size: clamp(2em, 5vw, 3.5em);
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.banner-content p {
+    font-size: clamp(1em, 2vw, 1.2em);
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.banner-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.banner-btn {
+    padding: clamp(12px, 2vw, 15px) clamp(20px, 3vw, 30px);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.banner-btn.primary {
+    background: #0066cc;
+    color: white;
+}
+
+.banner-btn.secondary {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 2px solid white;
+}
+
+.banner-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsividade do Banner */
+@media (min-width: 993px) {
+    .home-highlight {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    .home-highlight {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-highlight {
+        padding-top: 70px;
+    }
+}
+
+/* Responsividade do Navbar */
+@media (max-width: 992px) {
+    nav {
+        padding: 12px 20px;
+    }
+
+    .nav-container {
+        padding: 0;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 15px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+
+    nav ul.show {
+        display: block;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 12px 15px;
+        justify-content: flex-start;
+    }
+
+    .dropdown-menu,
+    .dropdown-submenu {
+        width: 100%;
+        margin-left: 15px;
+    }
+
+    .login-btn {
+        width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+    }
+}

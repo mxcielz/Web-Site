@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav-footer.css">
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Slideshow</title>
-  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <title>WB Manutenção</title>
   <style>
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 @import url('https://fonts.googleapis.com/css?family=Muli:300,400');
@@ -18,54 +19,54 @@ img {
 }
 
 @keyframes banner1 {
-    from { transform: scale(1) translateX(20px); opacity: 0; }
+    from { transform: scale(1) translateX(20px); opacity: 1; }
     to { transform: scale(0.9) translateX(0); opacity: 1; }
 }
 
 @keyframes banner2 {
-    from { transform: scale(1) translateX(20px); opacity: 0; }
+    from { transform: scale(1) translateX(20px); opacity: 1; }
     to { transform: scale(0.9) rotate(0); opacity: 1; }
 }
 
 @keyframes banner3 {
-    from { transform: scale(1) translateY(-20px); opacity: 0; }
+    from { transform: scale(1) translateY(20px); opacity: 1; }
     to { transform: scale(0.9) translateY(0); opacity: 1; }
 }
 
 @keyframes banner4 {
-    from { transform: scale(1) translateX(-30px); opacity: 0; }
+    from { transform: scale(1) translateX(20px); opacity: 1; }
     to { transform: scale(0.9) translateX(0); opacity: 1; }
 }
 
 @keyframes banner5 {
-    from { transform: scale(1) translateX(20px); opacity: 0; }
+    from { transform: scale(1) translateX(-20px); opacity: 1; }
     to { transform: scale(0.9) rotate(0); opacity: 1; }
 }
 
 @keyframes banner6 {
-    from { transform: scale(1) translateY(30px); opacity: 0; }
+    from { transform: scale(1) translateY(-20px); opacity: 1; }
     to { transform: scale(0.9) translateY(0); opacity: 1; }
 }
 
 @keyframes banner7 {
-    from { transform: scale(1) translateX(15px); opacity: 0; }
+    from { transform: scale(1) translateX(-20px); opacity: 1; }
     to { transform: scale(0.9) translateX(0); opacity: 1; }
 }
 
 @keyframes banner8 {
-    from { transform: scale(1) translateX(20px); opacity: 0; }
+    from { transform: scale(1) translateX(-20px); opacity: 1; }
     to { transform: scale(0.9) rotate(0); opacity: 1; }
 }
 
 /* Aplicação das animações nos cards */
-.card-1 { animation: banner1 1s ease-out 0.5s forwards; }
-.card-2 { animation: banner2 1s ease-out 0.8s forwards; }
-.card-3 { animation: banner3 1s ease-out 1.1s forwards; }
-.card-4 { animation: banner4 1s ease-out 1.4s forwards; }
-.card-5 { animation: banner5 1s ease-out 1.7s forwards; }
-.card-6 { animation: banner6 1s ease-out 2s forwards; }
-.card-7 { animation: banner7 1s ease-out 2.3s forwards; }
-.card-8 { animation: banner8 1s ease-out 2.6s forwards; }
+.card-1 { animation: banner1 1s ease-out 0.1s forwards; }
+.card-2 { animation: banner2 1s ease-out 0.1s forwards; }
+.card-3 { animation: banner3 1s ease-out 0.1s forwards; }
+.card-4 { animation: banner4 1s ease-out 0.1s forwards; }
+.card-5 { animation: banner5 1s ease-out 0.1s forwards; }
+.card-6 { animation: banner6 1s ease-out 0.1s forwards; }
+.card-7 { animation: banner7 1s ease-out 0.1 forwards; }
+.card-8 { animation: banner8 1s ease-out 0.1s forwards; }
 
 .hero-banner {
     display: grid;
@@ -85,45 +86,150 @@ img {
     transition: all 800ms cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
-:root {
-    --main: #1e1f26;
-    --accent: #b3b3b3;
-    --white: #fff;
-    --signal: #004080;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    font-family: sans-serif;
-    line-height: 1.4;
-}
-
-
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
+    position: relative;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    padding: 2em 0 0 0;
-    margin-top: 0.1rem;
-    width: 300px; /* You can adjust the width of each card */
-    height: 400px; /* Adjust the height */
-    border-radius: 1rem;
+    background-position: center;
+    height: 320px;
+    border-radius: 15px;
     overflow: hidden;
-    transition: ease-in-out 0.3s;
-    box-shadow: 5px 10px 12px 10px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    transform: scale(0.7);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    transform: scale(1);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.8) 70%
+    );
+    z-index: 1;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    z-index: 2;
+    transform: translateY(65%);
+    transition: transform 0.5s ease;
+}
+
+.card-title {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-description {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background: linear-gradient(45deg, #0056b3, #00b3ff);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.4);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card:hover .card-content {
+    transform: translateY(0);
+}
+
+.card:hover .card-description,
+.card:hover .card-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-button:hover {
+    background: linear-gradient(45deg, #00b3ff, #0056b3);
+    box-shadow: 0 8px 20px rgba(0, 86, 179, 0.6);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .card {
+        height: 280px;
+    }
+
+    .card-content {
+        padding: 1.2rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-description {
+        font-size: 0.85rem;
+    }
+
+    .card-button {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Animações de entrada */
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: cardFadeIn 0.8s ease forwards;
+    animation-delay: calc(var(--card-index) * 0.1s);
+    opacity: 0;
 }
 
 .card-1 {
@@ -154,38 +260,14 @@ img {
     background-image: url('imagem/ManutençaoMecanica/torre-de-resfriamento-01.jpg');
 }
 
-
-.card-content {
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.2) 10%,
-        rgba(0, 0, 0, 0.4) 20%,
-        rgba(0, 0, 0, 1) 100%
-    );
-    padding: 1em 2em;
-    color: var(--white);
-    transform: translateY(24em);
-    transition: ease-in-out 0.5s;
-    height: 100%;
-}
-
 .card-titel {
     position: relative;
     z-index: 2;
     font-size: 1.5rem;
 }
 
-.card:hover {
-    transform: scale(1);
-}
-
 .card:hover .card-titel::after {
     transform: translateX(-10%);
-}
-
-.card:hover .card-content {
-    transform: translateY(0);
 }
 
 .card-titel::after {
@@ -201,205 +283,400 @@ img {
     transition-delay: 0.5s;
     z-index: -1;
 }
-
-.card-button {
-    display: inline-block;
-    padding: 0.5rem 2rem;
-    border-radius: 0.2rem;
-    background-color: var(--signal);
-    cursor: pointer;
-    font-weight: 700;
-}
-
-.card-button:hover,
-.card-button:focus {
-    background-color: var(--accent);
-}
-
   </style>
 </head>
 <body>
-    <nav>
-        <div id="logo">
-            <img src="imagem/image.png" alt="WB Manutenção">
+  <nav>
+    <div class="nav-container">
+      <div id="logo">
+        <a href="index.html">
+          <img src="admin/imagem/logo.png" alt="WB Manutenção" class="nav-logo">
+        </a>
+      </div>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="empresa.html"><i class="fas fa-building"></i>Empresa</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-industry"></i>Áreas de Negócio<i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="./automacaoindustrial.html"><i class="fas fa-robot"></i>Automação Industrial</a></li>
+            <li><a href="./LocacaoDeEquipamento.html"><i class="fas fa-truck"></i>Locação De Equipamento</a></li>
+            <li><a href="./Topografia.html"><i class="fas fa-map-marked-alt"></i>Topografia</a></li>
+            <li class="dropdown">
+              <a href="#"><i class="fas fa-tools"></i>Manutenção Industrial<i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-submenu">
+                <li><a href="./manutencaoEletrica.html"><i class="fas fa-bolt"></i>Manutenção Elétrica</a></li>
+                <li><a href="./manutencaoMecanica.html"><i class="fas fa-cog"></i>Manutenção Mecânica</a></li>
+                <li><a href="./tubulacoes.html"><i class="fas fa-water"></i>Tubulações</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#"><i class="fas fa-hard-hat"></i>Trabalho Civil<i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-submenu">
+                <li><a href="./TrabalhoCivil/Alvenaria.html"><i class="fas fa-building"></i>Alvenaria</a></li>
+                <li><a href="./TrabalhoCivil/BaseEstrutural.html"><i class="fas fa-layer-group"></i>Base Estrutural</a></li>
+                <li><a href="./TrabalhoCivil/Pintura.html"><i class="fas fa-paint-roller"></i>Pintura</a></li>
+                <li><a href="./TrabalhoCivil/PisoEstrutural.html"><i class="fas fa-border-all"></i>Piso Estrutural</a></li>
+                <li><a href="./TrabalhoCivil/Montagemandaime.html"><i class="fas fa-cubes"></i>Montagem Andaime</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="clientes.html"><i class="fas fa-users"></i>Clientes</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-globe"></i>Localização<i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="./contato.html"><i class="fas fa-paper-plane"></i>Localização</a></li>
+            <li><a href="./trabalhe.html"><i class="fas fa-briefcase"></i>Trabalhe Conosco</a></li>
+          </ul>
+        </li>
+        <li><a href="admin/index.php" class="login-btn"><i class="fas fa-user"></i>Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+
+ <!-- Banner Principal -->
+ <section>
+
+</section>
+
+<br>
+<br>
+<div class="card-container">
+  <div class="card card-1">
+      <div class="card-content">
+          <h1 class="card-title">Alto Forno</h1>
+          <p class="card-description">Clique em Ver mais</p>
+          <a href="./ManuteçaoMecanica/AltoForno.html" class="card-button">Ver mais</a>
+      </div>
+  </div>
+
+  <div class="card card-2">
+      <div class="card-content">
+          <h1 class="card-title">Bombas</h1>
+          <p class="card-description">Clique em Ver mais</p>
+          <a href="./ManuteçaoMecanica/Bombas.html" class="card-button">Ver mais</a>
+      </div>
+  </div>
+
+  <div class="card card-3">
+      <div class="card-content">
+          <h1 class="card-title">Britadores</h1>
+          <p class="card-description">Clique em Ver mais</p>
+          <a href="./ManuteçaoMecanica/Britadores.html" class="card-button">Ver mais</a>
+      </div>
+  </div>
+
+  <div class="card card-4">
+      <div class="card-content">
+          <h1 class="card-title">Espessador de Lama</h1>
+          <p class="card-description">Clique em Ver mais</p>
+          <a href="./ManuteçaoMecanica/EspaçadoresDeLama.html" class="card-button">Ver mais</a>
+      </div>
+  </div>
+
+  <div class="card card-5">
+      <div class="card-content">
+          <h1 class="card-title">Moinho</h1>
+          <p class="card-description">Clique em Ver mais</p>
+          <a href="./ManuteçaoMecanica/Moinho.html" class="card-button">Ver mais</a>
+      </div>
+  </div>
+
+  <div class="card card-6">
+      <div class="card-content">
+          <h1 class="card-title">Peneira Variada</h1>
+          <p class="card-description">Clique em Ver mais</p>
+          <a href="./ManuteçaoMecanica/PeneiraVariada.html" class="card-button">Ver mais</a>
+      </div>
+  </div>
+
+  <div class="card card-7">
+      <div class="card-content">
+          <h1 class="card-title">Redutores</h1>
+          <p class="card-description">Clique em Ver mais</p>
+          <a href="./ManuteçaoMecanica/Redutores.html" class="card-button">Ver mais</a>
+      </div>
+  </div>
+
+  <div class="card card-8">
+      <div class="card-content">
+          <h1 class="card-title">Torres de Resfriamento</h1>
+          <p class="card-description">Clique em Ver mais</p>
+          <a href="./ManuteçaoMecanica/TorresResfriamento.html" class="card-button">Ver mais</a>
+      </div>
+  </div>
+</div>
+
+</section>
+</section>
+
+<br>
+<br>
+  <!-- Footer Modernizado -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="imagem/image.png" alt="WB Manutenção" class="footer-logo">
+          <p class="footer-description">Excelência em manutenção industrial desde 2008. Comprometidos com qualidade e inovação em todos os serviços.</p>
+          <div class="social-media">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          </div>
         </div>
-        <ul>
+        
+        <div class="footer-links">
+          <h3>Links Rápidos</h3>
+          <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="empresa.html">Empresa</a></li>
-            <li class="dropdown">
-                <a href="#">Áreas de Negócio</a>
-                <ul class="dropdown-menu">
-                    <li><a href="./automacaoindustrial.html">Automação Industrial</a></li>
-                    <li><a href="./LocacaoDeEquipamento.html">Locacão De Equipamento</a></li>
-                    <li><a href="./Topografia.html">Topografia</a></li>
-                    
-                    <li class="dropdown">
-                      <a href="#">Manutenção Industrial</a>
-                      <ul class="dropdown-submenu">
-                          <li><a href="./manutencaoEletrica.html">Manutenção Elétrica</a></li>
-                          <li><a href="./manutencaoMecanica.html">Manutenção Mecânica</a></li>
-                          <li><a href="./tubulacoes.html">Tubulações</a></li>
-                      </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#">Trabalho Civil</a>
-                    <ul class="dropdown-submenu">
-                        <li><a href="./TrabalhoCivil/Alvenaria.html">Alvenaria</a></li>
-                        <li><a href="./TrabalhoCivil/BaseEstrutural.html">Base Estrutural</a></li>
-                        <li><a href="./TrabalhoCivil/Pintura.html">Pintura</a></li>
-                        <li><a href="./TrabalhoCivil/PisoEstrutural.html">Piso Estrutural</a></li>
-                        <li><a href="./TrabalhoCivil/Montagemandaime.html">Montagem Andaime</a></li>
-      
-                        
-                    </ul>
-                </li>
-                  
-                </ul>
-            </li>
             <li><a href="clientes.html">Clientes</a></li>
-            <li class="dropdown">
-              <a href="#">Contato</a>
-              <ul class="dropdown-menu">
-                  <li><a href="./contato.html">Contato</a></li>
-                  <li class="dropdown">
-                  <li><a href="./trabalhe.html">Trabalhe-Conosco</a></li>
-              </ul>
-          </li>
-        </ul>
-    </nav>
+            <li><a href="./#contato">Contato</a></li>
+          </ul>
+        </div>
 
-    <div class="card-container">
-        <div class="card card-1">
-            <div class="card-content">
-                <h1 class="card-title">Alto Forno</h1>
-                <p class="card-description">Clique em Ver mais</p>
-                <a href="./ManuteçaoMecanica/AltoForno.html" class="card-button">Ver mais</a>
-            </div>
+        <div class="footer-contact">
+          <h3>Contato</h3>
+          <div class="contact-info">
+            <a href="tel:6735227228" class="footer-info-item">
+              <i class="fas fa-phone"></i>
+              <span>(67) 3522-7228</span>
+            </a>
+            <a href="https://wa.me/556799299440" class="footer-info-item">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+            <a href="mailto:contato@wbmanutencao.com.br" class="footer-info-item">
+              <i class="fas fa-envelope"></i>
+              <span>contato@wbmanutencao.com.br</span>
+            </a>
+          </div>
         </div>
-    
-        <div class="card card-2">
-            <div class="card-content">
-                <h1 class="card-title">Bombas</h1>
-                <p class="card-description">Clique em Ver mais</p>
-                <a href="./ManuteçaoMecanica/Bombas.html" class="card-button">Ver mais</a>
+
+        <div class="footer-address">
+          <h3>Localização</h3>
+          <a href="https://www.google.com/maps/search/?q=R.+João+Silva,+3498,+79645-010" 
+             target="_blank" 
+             class="address-link">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="address-text">
+              <p>R. João Silva, 3498</p>
+              <p>79645-010</p>
             </div>
+          </a>
         </div>
-    
-        <div class="card card-3">
-            <div class="card-content">
-                <h1 class="card-title">Britadores</h1>
-                <p class="card-description">Clique em Ver mais</p>
-                <a href="./ManuteçaoMecanica/Britadores.html" class="card-button">Ver mais</a>
-            </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; 2025 WB Manutenção | Todos os direitos reservados</p>
         </div>
-    
-        <div class="card card-4">
-            <div class="card-content">
-                <h1 class="card-title">Espessador de Lama</h1>
-                <p class="card-description">Clique em Ver mais</p>
-                <a href="./ManuteçaoMecanica/EspaçadoresDeLama.html" class="card-button">Ver mais</a>
-            </div>
+        <div class="footer-developer">
+          <span>Ajuda e Suporte por:</span>
+          <a href="http://www.sitefy.com.br" target="_blank">
+            <img src="imagem/sitefy.png" alt="Sitefy">
+          </a>
         </div>
-    
-        <div class="card card-5">
-            <div class="card-content">
-                <h1 class="card-title">Moinho</h1>
-                <p class="card-description">Clique em Ver mais</p>
-                <a href="./ManuteçaoMecanica/Moinho.html" class="card-button">Ver mais</a>
-            </div>
-        </div>
-    
-        <div class="card card-6">
-            <div class="card-content">
-                <h1 class="card-title">Peneira Variada</h1>
-                <p class="card-description">Clique em Ver mais</p>
-                <a href="./ManuteçaoMecanica/PeneiraVariada.html" class="card-button">Ver mais</a>
-            </div>
-        </div>
-    
-        <div class="card card-7">
-            <div class="card-content">
-                <h1 class="card-title">Redutores</h1>
-                <p class="card-description">Clique em Ver mais</p>
-                <a href="./ManuteçaoMecanica/Redutores.html" class="card-button">Ver mais</a>
-            </div>
-        </div>
-    
-        <div class="card card-8">
-            <div class="card-content">
-                <h1 class="card-title">Torres de Resfriamento</h1>
-                <p class="card-description">Clique em Ver mais</p>
-                <a href="./ManuteçaoMecanica/TorresResfriamento.html" class="card-button">Ver mais</a>
-            </div>
-        </div>
+      </div>
     </div>
-    
+  </footer>
 
-<br>
-<br>
-<footer>
-  <p>&copy; 2025 WB Manutenção | Todos os direitos reservados.</p>
-  <br>
-  <a href="http://www.sitefy.com.br" style="display: inline-block; margin-right: 7px;">
-    <img src="imagem/sitefy.png" alt="Sitefy" style="width: 50px;">
+  <!-- WhatsApp Flutuante -->
+  <a class="whatsapp-link" href="https://api.whatsapp.com/send/?phone=556799299440" target="_blank">
+    <i class="fab fa-whatsapp"></i>
   </a>
-  <a href="https://wa.me/556799299440" style="display: inline-block;">
-    <img src="./imagem/whatsapp.png" alt="Iconi" style="width: 30px;">
-  </a>
-  <br><br>
-  <a href="https://www.google.com/search?q=R.+Jo%C3%A3o+Silva%2C+3498%2C+79645-010&oq=R.+Jo%C3%A3o+Silva%2C+3498%2C+79645-010&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABiABBiiBDIKCAIQABiABBiiBDIKCAMQABiABBiiBDIKCAQQABiABBiiBDIKCAUQABiABBiiBNIBBzU5NGowajSoAgCwAgE&sourceid=chrome&ie=UTF-8">
-    <p>R. João Silva, 3498, 79645-010 </p>
-    <a href="">
-      <img src="imagem/telephone.png" alt="WhatsApp" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 3px;">
-      (67) 3522-7228
-    </a>
-  </a>
-</footer>
 
-<script src="assets/js/jquery-1.11.3.min.js"></script>
-<script src="assets/js/jquery.collapse.js"></script>
-<script src="assets/js/jquery.slicknav.min.js"></script>
-<script src="assets/js/main.js"></script>
+  <!-- Scripts -->
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
+  <script src="assets/js/jquery.collapse.js"></script>
+  <script src="assets/js/jquery.slicknav.min.js"></script>
+  <script src="assets/js/main.js"></script>
 
-<script>
-const slides = document.querySelectorAll('.slide');
-const descriptionDiv = document.getElementById('description');
-const toggleBtns = document.querySelectorAll('.toggle-btn');
-
-for (const slide of slides) {
-  slide.addEventListener('click', () => {
-    clearActiveClasses();
-    slide.classList.add('active');
-    descriptionDiv.textContent = slide.getAttribute('data-description');
-    descriptionDiv.style.display = 'block'; // Show the description
-    setTimeout(() => {
-      descriptionDiv.classList.add('show'); // Trigger the animation after a short delay
-    }, 10); // Delay added for smoother animation
-  });
-}
-
-toggleBtns.forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    e.stopPropagation();  // Prevents the click event on the slide from triggering
-    const moreText = this.previousElementSibling; // Selects the .more-text div
-    moreText.classList.toggle('show'); // Toggles visibility of additional text
-    if (moreText.classList.contains('show')) {
-      this.textContent = "Ver menos";  // Changes button text to "Ver menos"
-    } else {
-      this.textContent = "Ver mais";  // Changes button text to "Ver mais"
+  <!-- Script de Animação -->
+  <script>
+    // Função para animar os parágrafos quando visíveis
+    function animateOnScroll() {
+      const paragraphs = document.querySelectorAll('.leftCol p');
+      
+      paragraphs.forEach(paragraph => {
+        const rect = paragraph.getBoundingClientRect();
+        const isVisible = (rect.top <= window.innerHeight * 0.8);
+        
+        if (isVisible) {
+          paragraph.classList.add('visible');
+        }
+      });
     }
-  });
-});
 
-function clearActiveClasses() {
-  slides.forEach((slide) => {
-    slide.classList.remove('active');
-  });
-  descriptionDiv.classList.remove('show'); // Hide the description with animation
-}
+    // Adicionar listener para scroll
+    window.addEventListener('scroll', animateOnScroll);
+    // Executar uma vez quando a página carrega
+    window.addEventListener('load', animateOnScroll);
 
+    // Função para controlar a navbar durante a rolagem
+    function handleNavbarScroll() {
+      const nav = document.querySelector('nav');
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
 
+    // Função para destacar o item do menu ativo
+    function setActiveMenuItem() {
+      const sections = document.querySelectorAll('section');
+      const navItems = document.querySelectorAll('nav ul li a');
+      
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop - 150) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href').includes(current)) {
+          item.classList.add('active');
+        }
+      });
+    }
 
-</script>
+    // Função para animação suave ao clicar nos links do menu
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Observador de interseção para animações de entrada
+    const navObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('nav-visible');
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    // Aplicar observador aos itens do menu
+    document.querySelectorAll('nav ul li').forEach(item => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(-20px)';
+      navObserver.observe(item);
+    });
+
+    // Event listeners
+    window.addEventListener('scroll', () => {
+      handleNavbarScroll();
+      setActiveMenuItem();
+    });
+    window.addEventListener('load', () => {
+      handleNavbarScroll();
+      setActiveMenuItem();
+    });
+
+    function checkScroll() {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementTop < windowHeight * 0.85) {
+          element.classList.add('visible');
+          
+          // Inicia a animação dos contadores quando visíveis
+          element.querySelectorAll('.counter').forEach(counter => {
+            if (!counter.classList.contains('counted')) {
+              animateCounter(counter);
+              counter.classList.add('counted');
+            }
+          });
+        }
+      });
+    }
+
+    function animateCounter(counter) {
+      const target = parseInt(counter.textContent);
+      let current = 0;
+      const increment = target / 50; // Ajuste para velocidade da animação
+      const duration = 2000; // Duração total em ms
+      const stepTime = duration / 50;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          counter.textContent = target;
+          clearInterval(timer);
+        } else {
+          counter.textContent = Math.floor(current);
+        }
+      }, stepTime);
+    }
+
+    // Adiciona classes de animação aos elementos quando visíveis
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          if (entry.target.classList.contains('feature-item')) {
+            entry.target.style.transitionDelay = `${entry.target.dataset.delay}ms`;
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.feature-item').forEach((item, index) => {
+      item.dataset.delay = index * 200;
+      observer.observe(item);
+    });
+
+    window.addEventListener('load', checkScroll);
+    window.addEventListener('scroll', checkScroll);
+
+    // Mobile menu
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuBtn = document.querySelector('.slicknav_btn');
+      const mobileMenu = document.querySelector('.slicknav_nav');
+      
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+          mobileMenu.classList.toggle('show');
+          this.classList.toggle('active');
+        });
+      }
+    });
+
+    // Inicializa os índices dos cards para animação
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach((card, index) => {
+        card.style.setProperty('--card-index', index);
+      });
+    });
+  </script>
 </body>
 </html>

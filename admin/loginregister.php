@@ -6,7 +6,7 @@
     <title>WB - Admin</title>
     <link rel="stylesheet" href="style.css">
     <style>
-    <style>
+
         /* BASIC */
         html {
             background: linear-gradient(120deg, #56baed, #39ace7);

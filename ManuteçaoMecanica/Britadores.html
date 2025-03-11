@@ -1,103 +1,357 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WB Manutenção</title>
-   
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../nav-footer.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WB Manutenção</title>
+  <style>
+
+  </style>
 </head>
 <body>
-    <nav>
-        <div id="logo">
-            <img src="../imagem/image.png" alt="WB Manutenção">
+  <nav>
+    <div class="nav-container">
+      <div id="logo">
+        <a href="../index.html">
+          <img src="../admin/imagem/logo.png" alt="WB Manutenção" class="nav-logo">
+        </a>
+      </div>
+      <ul>
+        <li><a href="../index.html"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="../empresa.html"><i class="fas fa-building"></i>Empresa</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-industry"></i>Áreas de Negócio<i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="../automacaoindustrial.html"><i class="fas fa-robot"></i>Automação Industrial</a></li>
+            <li><a href="../LocacaoDeEquipamento.html"><i class="fas fa-truck"></i>Locação De Equipamento</a></li>
+            <li><a href="../Topografia.html"><i class="fas fa-map-marked-alt"></i>Topografia</a></li>
+            <li class="dropdown">
+              <a href="#"><i class="fas fa-tools"></i>Manutenção Industrial<i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-submenu">
+                <li><a href="../manutencaoEletrica.html"><i class="fas fa-bolt"></i>Manutenção Elétrica</a></li>
+                <li><a href="../manutencaoMecanica.html"><i class="fas fa-cog"></i>Manutenção Mecânica</a></li>
+                <li><a href="../tubulacoes.html"><i class="fas fa-water"></i>Tubulações</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#"><i class="fas fa-hard-hat"></i>Trabalho Civil<i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-submenu">
+                <li><a href="../TrabalhoCivil/Alvenaria.html"><i class="fas fa-building"></i>Alvenaria</a></li>
+                <li><a href="../TrabalhoCivil/BaseEstrutural.html"><i class="fas fa-layer-group"></i>Base Estrutural</a></li>
+                <li><a href="../TrabalhoCivil/Pintura.html"><i class="fas fa-paint-roller"></i>Pintura</a></li>
+                <li><a href="../TrabalhoCivil/PisoEstrutural.html"><i class="fas fa-border-all"></i>Piso Estrutural</a></li>
+                <li><a href="../TrabalhoCivil/Montagemandaime.html"><i class="fas fa-cubes"></i>Montagem Andaime</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="../clientes.html"><i class="fas fa-users"></i>Clientes</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-globe"></i>Localização<i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="../contato.html"><i class="fas fa-paper-plane"></i>Localização</a></li>
+            <li><a href="../trabalhe.html"><i class="fas fa-briefcase"></i>Trabalhe Conosco</a></li>
+          </ul>
+        </li>
+        <li><a href="../admin/index.php" class="login-btn"><i class="fas fa-user"></i>Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+
+ <!-- Banner Principal -->
+ <section class="home-highlight wrapper">
+  <div class="banner-overlay"></div>
+  <div class="banner-slide">
+    <img src="../imagem/image.png" alt="WB Manutenção" class="banner-image">
+    <div class="banner-content">
+      <h1>BRITADORES</h1>
+    </div>
+  </div>
+</section>
+
+<br>
+<br>
+<section class="content wrapper">
+  <div class="content-container">
+      <section class="leftCol">
+          <p>A WB Manutenção é uma empresa reconhecida no mercado pela sua sólida competência e vasta experiência no fornecimento, instalação e manutenção de britadores de mandíbula e britadores cônicos. Com anos de atuação no setor de mineração e construção, a empresa se especializa em oferecer soluções eficientes para britagem de materiais, com equipamentos de alta performance e confiabilidade.</p>
+      </section>
+
+      <section class="rightCol">
+          <div class="image-title">
+              <img src="../imagem/ManutençaoMecanica/britadoresMandibula.png" alt="Sistema de proteção" data-fullsize="../imagem/ManutençaoMecanica/britadoresMandibula.png">
+          </div>
+      </section>
+      <section class="rightCol">
+          <div class="image-title">
+              <img src="../imagem/ManutençaoMecanica/britadoresconico.jpg" alt="Sistema de proteção" data-fullsize="../imagem/ManutençaoMecanica/britadoresconico.jpg">
+          </div>
+      </section>
+  </div>
+</section>
+
+<br>
+<br>
+  <!-- Footer Modernizado -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../imagem/image.png" alt="WB Manutenção" class="footer-logo">
+          <p class="footer-description">Excelência em manutenção industrial desde 2008. Comprometidos com qualidade e inovação em todos os serviços.</p>
+          <div class="social-media">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          </div>
         </div>
-        <ul>
+        
+        <div class="footer-links">
+          <h3>Links Rápidos</h3>
+          <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../empresa.html">Empresa</a></li>
-            <li class="dropdown">
-                <a href="#">Áreas de Negócio</a>
-                <ul class="dropdown-menu">
-                    <li><a href="../automacaoindustrial.html">Automação Industrial</a></li>
-                    <li><a href="../LocacaoDeEquipamento.html">Locacão De Equipamento</a></li>
-                    <li><a href="../Topografia.html">Topografia</a></li>
-                    
-                    <li class="dropdown">
-                      <a href="#">Manutenção Industrial</a>
-                      <ul class="dropdown-submenu">
-                          <li><a href="../manutencaoEletrica.html">Manutenção Elétrica</a></li>
-                          <li><a href="../manutencaoMecanica.html">Manutenção Mecânica</a></li>
-                          <li><a href="../tubulacoes.html">Tubulações</a></li>
-                      </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#">Trabalho Civil</a>
-                    <ul class="dropdown-submenu">
-                        <li><a href="../TrabalhoCivil/Alvenaria.html">Alvenaria</a></li>
-                        <li><a href="../TrabalhoCivil/BaseEstrutural.html">Base Estrutural</a></li>
-                        <li><a href="../TrabalhoCivil/Pintura.html">Pintura</a></li>
-                        <li><a href="../TrabalhoCivil/PisoEstrutural.html">Piso Estrutural</a></li>
-                        <li><a href="../TrabalhoCivil/Montagemandaime.html">Montagem Andaime</a></li>
-      
-                        
-                    </ul>
-                </li>
-                  
-                </ul>
-            </li>
             <li><a href="../clientes.html">Clientes</a></li>
-            <li class="dropdown">
-              <a href="#">Contato</a>
-              <ul class="dropdown-menu">
-                  <li><a href="../contato.html">Contato</a></li>
-                  <li class="dropdown">
-                  <li><a href="../trabalhe.html">Trabalhe-Conosco</a></li>
-              </ul>
-          </li>
-        </ul>
-    </nav>
-
-    <header class="innerHeader">
-        <h1>Britadores</h1>
-    </header>
-
-    <section class="content wrapper">
-        <div class="content-container">
-            <section class="leftCol">
-                <p>A WB Manutenção é uma empresa reconhecida no mercado pela sua sólida competência e vasta experiência no fornecimento, instalação e manutenção de britadores de mandíbula e britadores cônicos. Com anos de atuação no setor de mineração e construção, a empresa se especializa em oferecer soluções eficientes para britagem de materiais, com equipamentos de alta performance e confiabilidade.</p>
-            </section>
-    
-            <section class="rightCol">
-                <div class="image-title">
-                    <img src="../imagem/ManutençaoMecanica/britadoresMandibula.png" alt="Sistema de proteção" data-fullsize="../imagem/ManutençaoMecanica/britadoresMandibula.png">
-                </div>
-            </section>
-            <section class="rightCol">
-                <div class="image-title">
-                    <img src="../imagem/ManutençaoMecanica/britadoresconico.jpg" alt="Sistema de proteção" data-fullsize="../imagem/ManutençaoMecanica/britadoresconico.jpg">
-                </div>
-            </section>
+            <li><a href="../#contato">Contato</a></li>
+          </ul>
         </div>
-    </section>
-   
 
-    <a class="whatsapp-link" href="https://api.whatsapp.com/send/?phone=556799299440" target="_blank" style="position: fixed; left: 20px; bottom: 20px;">
-        <img src="../imagem/whatsapp.png" alt="WhatsApp" style="width: 60px; height: 60px;">
-    </a>
-    
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 WB Manutenção | Todos os direitos reservados.</p>
-        <a href="http://www.sitefy.com.br">
-            <img src="../imagem/sitefy.png" alt="Sitefy" style="width: 50px;">
-        </a>
-        <a href="https://wa.me/556799299440">
-            <img src="../imagem/whatsapp.png" alt="WhatsApp" style="width: 30px;">
-        </a>
-        <p>R. João Silva, 3498, 79645-010 | <a href="tel:6735227228">(67) 3522-7228</a></p>
-    </footer>
+        <div class="footer-contact">
+          <h3>Contato</h3>
+          <div class="contact-info">
+            <a href="tel:6735227228" class="footer-info-item">
+              <i class="fas fa-phone"></i>
+              <span>(67) 3522-7228</span>
+            </a>
+            <a href="https://wa.me/556799299440" class="footer-info-item">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+            <a href="mailto:contato@wbmanutencao.com.br" class="footer-info-item">
+              <i class="fas fa-envelope"></i>
+              <span>contato@wbmanutencao.com.br</span>
+            </a>
+          </div>
+        </div>
 
-    <script src="../main.js"></script>
+        <div class="footer-address">
+          <h3>Localização</h3>
+          <a href="https://www.google.com/maps/search/?q=R.+João+Silva,+3498,+79645-010" 
+             target="_blank" 
+             class="address-link">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="address-text">
+              <p>R. João Silva, 3498</p>
+              <p>79645-010</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; 2025 WB Manutenção | Todos os direitos reservados</p>
+        </div>
+        <div class="footer-developer">
+          <span>Ajuda e Suporte por:</span>
+          <a href="http://www.sitefy.com.br" target="_blank">
+            <img src="../imagem/sitefy.png" alt="Sitefy">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flutuante -->
+  <a class="whatsapp-link" href="https://api.whatsapp.com/send/?phone=556799299440" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
+  <script src="assets/js/jquery.collapse.js"></script>
+  <script src="assets/js/jquery.slicknav.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Script de Animação -->
+  <script>
+    // Função para animar os parágrafos quando visíveis
+    function animateOnScroll() {
+      const paragraphs = document.querySelectorAll('.leftCol p');
+      
+      paragraphs.forEach(paragraph => {
+        const rect = paragraph.getBoundingClientRect();
+        const isVisible = (rect.top <= window.innerHeight * 0.8);
+        
+        if (isVisible) {
+          paragraph.classList.add('visible');
+        }
+      });
+    }
+
+    // Adicionar listener para scroll
+    window.addEventListener('scroll', animateOnScroll);
+    // Executar uma vez quando a página carrega
+    window.addEventListener('load', animateOnScroll);
+
+    // Função para controlar a navbar durante a rolagem
+    function handleNavbarScroll() {
+      const nav = document.querySelector('nav');
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+
+    // Função para destacar o item do menu ativo
+    function setActiveMenuItem() {
+      const sections = document.querySelectorAll('section');
+      const navItems = document.querySelectorAll('nav ul li a');
+      
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop - 150) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href').includes(current)) {
+          item.classList.add('active');
+        }
+      });
+    }
+
+    // Função para animação suave ao clicar nos links do menu
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Observador de interseção para animações de entrada
+    const navObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('nav-visible');
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    // Aplicar observador aos itens do menu
+    document.querySelectorAll('nav ul li').forEach(item => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(-20px)';
+      navObserver.observe(item);
+    });
+
+    // Event listeners
+    window.addEventListener('scroll', () => {
+      handleNavbarScroll();
+      setActiveMenuItem();
+    });
+    window.addEventListener('load', () => {
+      handleNavbarScroll();
+      setActiveMenuItem();
+    });
+
+    function checkScroll() {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementTop < windowHeight * 0.85) {
+          element.classList.add('visible');
+          
+          // Inicia a animação dos contadores quando visíveis
+          element.querySelectorAll('.counter').forEach(counter => {
+            if (!counter.classList.contains('counted')) {
+              animateCounter(counter);
+              counter.classList.add('counted');
+            }
+          });
+        }
+      });
+    }
+
+    function animateCounter(counter) {
+      const target = parseInt(counter.textContent);
+      let current = 0;
+      const increment = target / 50; // Ajuste para velocidade da animação
+      const duration = 2000; // Duração total em ms
+      const stepTime = duration / 50;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          counter.textContent = target;
+          clearInterval(timer);
+        } else {
+          counter.textContent = Math.floor(current);
+        }
+      }, stepTime);
+    }
+
+    // Adiciona classes de animação aos elementos quando visíveis
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          if (entry.target.classList.contains('feature-item')) {
+            entry.target.style.transitionDelay = `${entry.target.dataset.delay}ms`;
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.feature-item').forEach((item, index) => {
+      item.dataset.delay = index * 200;
+      observer.observe(item);
+    });
+
+    window.addEventListener('load', checkScroll);
+    window.addEventListener('scroll', checkScroll);
+
+    // Mobile menu
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuBtn = document.querySelector('.slicknav_btn');
+      const mobileMenu = document.querySelector('.slicknav_nav');
+      
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+          mobileMenu.classList.toggle('show');
+          this.classList.toggle('active');
+        });
+      }
+    });
+  </script>
 </body>
 </html>

@@ -2,178 +2,1707 @@
 <html lang="pt-br">
 <head>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav-footer.css">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WB Manutençao</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="WB Manutenção - Empresa líder em manutenção industrial, automação, elétrica e mecânica. Soluções completas e inovadoras para sua indústria com mais de 15 anos de experiência.">
+  <meta name="keywords" content="manutenção industrial, automação industrial, manutenção elétrica, manutenção mecânica, tubulações industriais, trabalho civil, wb manutenção">
+  <meta name="author" content="WB Manutenção">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.wbmanutencao.com.br/">
+  <meta property="og:title" content="WB Manutenção - Excelência em Manutenção Industrial">
+  <meta property="og:description" content="Soluções completas em manutenção industrial, automação, elétrica e mecânica. Mais de 15 anos de experiência no mercado.">
+  <meta property="og:image" content="admin/imagem/logo.png">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.wbmanutencao.com.br/">
+  <meta property="twitter:title" content="WB Manutenção - Excelência em Manutenção Industrial">
+  <meta property="twitter:description" content="Soluções completas em manutenção industrial, automação, elétrica e mecânica. Mais de 15 anos de experiência no mercado.">
+  <meta property="twitter:image" content="admin/imagem/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="nav-footer.css" as="style">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav-footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+        integrity="sha512-PLACEHOLDER" 
+        crossorigin="anonymous">
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "WB Manutenção",
+      "description": "Empresa especializada em manutenção industrial, automação, elétrica e mecânica",
+      "url": "https://www.wbmanutencao.com.br",
+      "logo": "admin/imagem/logo.png",
+      "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+55-67-3522-7228",
+          "contactType": "customer service",
+          "areaServed": "BR"
+      },
+      "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R. João Silva, 3498",
+          "postalCode": "79645-010",
+          "addressCountry": "BR"
+      },
+      "sameAs": [
+          "https://www.facebook.com/wbmanutencao",
+          "https://www.instagram.com/wbmanutencao",
+          "https://www.linkedin.com/company/wbmanutencao"
+      ]
+  }
+  </script>
+  <title>WB Manutenção - Excelência em Manutenção Industrial | Automação | Elétrica | Mecânica</title>
+  <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <style>
+    
     @keyframes slide-in {
-    from {
-      transform: translateY(+100%); /* Começa de cima */
-      opacity: 0.25;
+      from {
+        transform: translateY(+100%);
+        opacity: 0.25;
+      }
+      to {
+        transform: translateY(0%);
+        opacity: 1;
+      }
     }
-    to {
-      transform: translateY(0%); /* Termina na posição original */
+
+    .business-item {
+      animation: slide-in 1000ms ease-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+    }
+
+    .business-item:nth-of-type(1) {
+      animation-delay: 0s;
+    }
+
+    .business-item:nth-of-type(2) {
+      animation-delay: 0.2s;
+    }
+
+    .business-item:nth-of-type(3) {
+      animation-delay: 0.4s;
+    }
+
+    .business-item:nth-of-type(4) {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scale-in {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+
+    .animate-on-scroll.visible {
       opacity: 1;
+      transform: translateY(0);
     }
-  }
 
-  /* Aplicando a animação slide-in nos itens de negócios */
-  .business-item {
-    animation: slide-in 1000ms ease-out;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-  }
+    .section-empresa {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      position: relative;
+      overflow: hidden;
+    }
 
-  /* Atrasos para cada item aparecer em sequência */
-  .business-item:nth-of-type(1) {
-    animation-delay: 0s;
-  }
+    .content-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
 
-  .business-item:nth-of-type(2) {
-    animation-delay: 0.2s;
-  }
+    .leftCol, .rightCol {
+      flex: 1;
+      min-width: 0;
+    }
 
-  .business-item:nth-of-type(3) {
-    animation-delay: 0.4s;
-  }
+    .empresa-content {
+      text-align: center;
+    }
 
-  .business-item:nth-of-type(4) {
-    animation-delay: 0.6s;
-  }
+    .section-description {
+      max-width: 800px;
+      margin: 0 auto 25px;
+      text-align: center;
+      line-height: 1.6;
+      color: #666;
+    }
 
-  
-</style>
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .feature-icon {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 10px;
+    }
+
+    .feature-content h3 {
+      font-size: 1.1em;
+      margin-bottom: 5px;
+    }
+
+    .feature-content p {
+      font-size: 0.85em;
+      color: #666;
+    }
+
+    .image-wrapper {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    .empresa-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .image-wrapper:hover .empresa-image {
+      transform: scale(1.05);
+    }
+
+    .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(0,64,128,0.7), rgba(0,102,204,0.4));
+    }
+
+    .experience-badge {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .experience-badge:hover {
+      transform: translateY(-5px);
+    }
+
+    .experience-badge .years {
+      font-size: 36px;
+      font-weight: bold;
+      color: #004080;
+      display: block;
+      line-height: 1;
+    }
+
+    .experience-badge .text {
+      font-size: 14px;
+      color: #666;
+      margin-top: 5px;
+      display: block;
+    }
+
+    .stats-container {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      right: 30px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .stat-item {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 15px 25px;
+      border-radius: 12px;
+      text-align: center;
+      flex: 1;
+      transition: transform 0.3s ease;
+    }
+
+    .stat-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-number {
+      font-size: 28px;
+      font-weight: bold;
+      color: #004080;
+      display: block;
+      line-height: 1;
+    }
+
+    .stat-text {
+      font-size: 13px;
+      color: #666;
+      margin-top: 5px;
+      display: block;
+    }
+
+    .certifications {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .certifications h4 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .certifications h4:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 2px;
+      background: #004080;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .cert-item {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .cert-item:hover {
+      background: #004080;
+      transform: translateY(-5px);
+    }
+
+    .cert-item:hover i,
+    .cert-item:hover span {
+      color: white;
+    }
+
+    .cert-item i {
+      font-size: 24px;
+      color: #004080;
+      margin-bottom: 8px;
+      display: block;
+      transition: color 0.3s ease;
+    }
+
+    .cert-item span {
+      font-size: 14px;
+      color: #666;
+      display: block;
+      transition: color 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .stats-container {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .experience-badge {
+        top: 20px;
+        right: 20px;
+        padding: 15px;
+      }
+
+      .experience-badge .years {
+        font-size: 28px;
+      }
+
+      .experience-badge .text {
+        font-size: 12px;
+      }
+    }
+
+    .section-clientes {
+      padding: 80px 0;
+      background: #fff;
+    }
+
+    .clientes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .cliente-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .cliente-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .section-contato {
+      padding: 50px 0;
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      color: white;
+    }
+
+    .contato-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .contato-info {
+      padding: 30px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+    }
+
+    .contato-form {
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      color: #333;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 2.2em;
+      color: #333;
+    }
+
+    .section-contato .section-title {
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .content-container {
+        flex-direction: column;
+      }
+
+      .business-container {
+        grid-template-columns: 1fr;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .business-item {
+        max-width: 100%;
+      }
+    }
+
+    .home-highlight {
+      position: relative;
+      height: 70vh;
+      background: #004080;
+      overflow: hidden;
+      padding-top: 80px;
+      margin-top: 0;
+    }
+
+    .banner-slide {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .banner-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.4;
+      transition: opacity 0.3s ease;
+    }
+
+    .banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(0,64,128,0.9), rgba(0,102,204,0.8));
+      z-index: 1;
+    }
+
+    .banner-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      max-width: 800px;
+      padding: 0 20px;
+      animation: fadeInUp 1s ease;
+      margin: 0 auto;
+    }
+
+    .banner-content h1 {
+      font-size: clamp(2em, 5vw, 3.5em);
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .banner-content p {
+      font-size: clamp(1em, 2vw, 1.2em);
+      margin-bottom: 30px;
+      line-height: 1.6;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .banner-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0 10px;
+    }
+
+    .banner-btn {
+      padding: clamp(12px, 2vw, 15px) clamp(20px, 3vw, 30px);
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .banner-btn.primary {
+      background: #0066cc;
+      color: white;
+    }
+
+    .banner-btn.secondary {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border: 2px solid white;
+    }
+
+    .banner-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .home-business {
+      padding: 40px 0;
+      background: #f8f9fa;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      background: linear-gradient(45deg, #004080, #0066cc);
+      color: white;
+      border-radius: 20px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-size: 2.2em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .section-divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(45deg, #004080, #0066cc);
+      margin: 0 auto;
+    }
+
+    .business-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .business-item {
+      flex: 0 1 250px;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+
+    .business-item a {
+      text-decoration: none;
+      display: block;
+      height: 100%;
+    }
+
+    .business-image {
+      position: relative;
+      height: 160px;
+      overflow: hidden;
+    }
+
+    .business-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .business-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 120px;
+    }
+
+    .business-content i {
+      font-size: 2em;
+      color: #0066cc;
+      margin-bottom: 10px;
+    }
+
+    .business-content h3 {
+      font-size: 1.2em;
+      color: #333;
+      margin: 0 0 8px 0;
+      text-align: center;
+    }
+
+    .business-content p {
+      color: #666;
+      font-size: 0.9em;
+      line-height: 1.4;
+      margin: 0;
+      text-align: center;
+    }
+
+    .business-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    .section-empresa::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('imagem/pattern.png') repeat;
+      opacity: 0.05;
+    }
+
+    .client-item {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.5s ease;
+      transform: translateY(0);
+    }
+
+    .client-item:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    .section-contato {
+      background: linear-gradient(135deg, #004080 0%, #0066cc 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contato-form {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e1e1e1;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      font-size: 16px;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #004080;
+      box-shadow: 0 0 0 3px rgba(0,64,128,0.1);
+    }
+
+    #enviar-btn {
+      background: linear-gradient(45deg, #004080, #0066cc);
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    #enviar-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .section-contato .social-media {
+      margin-top: 30px;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+
+    .section-contato .social-media h3 {
+      color: #0066cc;
+      font-size: 1.3em;
+      margin-bottom: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-contato .social-media h3:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 2px;
+      background: #0066cc;
+    }
+
+    .section-contato .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .section-contato .social-icon {
+      width: 50px;
+      height: 50px;
+      background: #0066cc;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .section-contato .social-icon:hover {
+      background: #0052a3;
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 102, 204, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .section-contato .social-media {
+        margin-top: 25px;
+        padding: 20px;
+      }
+
+      .section-contato .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3em;
+      }
+    }
+
+    .section-empresa {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-header-wrapper {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-badge {
+      background: linear-gradient(45deg, #004080, #0066cc);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 15px rgba(0, 64, 128, 0.2);
+    }
+
+    .section-title {
+      font-size: 2.5em;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .section-divider {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(45deg, #004080, #0066cc);
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    .section-description {
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .gradient-overlay {
+      background: linear-gradient(45deg, rgba(0, 64, 128, 0.8), rgba(0, 102, 204, 0.6));
+    }
+
+    .feature-item {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-item.hover-effect:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(45deg, #004080, #0066cc);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .feature-icon i {
+      color: white;
+      font-size: 24px;
+    }
+
+    .feature-icon.pulse::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      border-radius: 50%;
+      z-index: -1;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+      70% {
+        transform: scale(1.1);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 0;
+      }
+    }
+
+    .experience-badge.floating {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .badge-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .years, .stat-number {
+      font-size: 2.5em;
+      font-weight: 700;
+      color: #004080;
+      line-height: 1;
+    }
+
+    .plus, .percent {
+      color: #0066cc;
+      font-weight: 600;
+      font-size: 1.2em;
+    }
+
+    .certifications {
+      padding: 30px;
+      border-radius: 20px;
+      margin-top: 30px;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .cert-item {
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .cert-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(45deg, #004080, #0066cc);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+    }
+
+    .cert-icon i {
+      color: white;
+      font-size: 20px;
+    }
+
+    .cert-item span {
+      color: #333;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .section-empresa {
+        padding: 60px 0;
+      }
+
+      .section-title {
+        font-size: 2em;
+      }
+
+      .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .business-container {
+        justify-content: center;
+      }
+      
+      .business-item {
+        flex: 0 1 calc(50% - 20px);
+        max-width: 300px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .business-item {
+        flex: 0 1 100%;
+        max-width: 280px;
+      }
+    }
+
+    .whatsapp-link {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25d366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .whatsapp-link:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+
+    @media (min-width: 993px) {
+      .home-highlight {
+        padding-top: 100px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .home-highlight {
+        padding-top: 80px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .home-highlight {
+        padding-top: 70px;
+      }
+    }
+
+    .home-highlight {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner-content {
+      padding-top: 60px;
+    }
+  </style>
 </head>
 <body>
-  <body>
-    <nav>
-        <div id="logo">
-            <img src="imagem/image.png" alt="WB Manutenção">
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="empresa.html">Empresa</a></li>
+  <nav>
+    <div class="nav-container">
+      <div id="logo">
+        <a href="index.html">
+          <img src="admin/imagem/logo.png" alt="WB Manutenção" class="nav-logo">
+        </a>
+      </div>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="empresa.html"><i class="fas fa-building"></i>Empresa</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-industry"></i>Áreas de Negócio<i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="./automacaoindustrial.html"><i class="fas fa-robot"></i>Automação Industrial</a></li>
+            <li><a href="./LocacaoDeEquipamento.html"><i class="fas fa-truck"></i>Locação De Equipamento</a></li>
+            <li><a href="./Topografia.html"><i class="fas fa-map-marked-alt"></i>Topografia</a></li>
             <li class="dropdown">
-                <a href="#">Áreas de Negócio</a>
-                <ul class="dropdown-menu">
-                    <li><a href="./automacaoindustrial.html">Automação Industrial</a></li>
-                    <li><a href="./LocacaoDeEquipamento.html">Locacão De Equipamento</a></li>
-                    <li><a href="./Topografia.html">Topografia</a></li>
-                    
-                    <li class="dropdown">
-                      <a href="#">Manutenção Industrial</a>
-                      <ul class="dropdown-submenu">
-                          <li><a href="./manutencaoEletrica.html">Manutenção Elétrica</a></li>
-                          <li><a href="./manutencaoMecanica.html">Manutenção Mecânica</a></li>
-                          <li><a href="./tubulacoes.html">Tubulações</a></li>
-                      </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#">Trabalho Civil</a>
-                    <ul class="dropdown-submenu">
-                        <li><a href="./TrabalhoCivil/Alvenaria.html">Alvenaria</a></li>
-                        <li><a href="./TrabalhoCivil/BaseEstrutural.html">Base Estrutural</a></li>
-                        <li><a href="./TrabalhoCivil/Pintura.html">Pintura</a></li>
-                        <li><a href="./TrabalhoCivil/PisoEstrutural.html">Piso Estrutural</a></li>
-                        <li><a href="./TrabalhoCivil/Montagemandaime.html">Montagem Andaime</a></li>
-                    </ul>
-                </li>                  
-                </ul>
-            </li>
-            <li><a href="clientes.html">Clientes</a></li>
-            <li class="dropdown">
-              <a href="#">Contato</a>
-              <ul class="dropdown-menu">
-                  <li><a href="./contato.html">Contato</a></li>
-                  <li class="dropdown">
-                  <li><a href="./trabalhe.html">Trabalhe-Conosco</a></li>
+              <a href="#"><i class="fas fa-tools"></i>Manutenção Industrial<i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-submenu">
+                <li><a href="./manutencaoEletrica.html"><i class="fas fa-bolt"></i>Manutenção Elétrica</a></li>
+                <li><a href="./manutencaoMecanica.html"><i class="fas fa-cog"></i>Manutenção Mecânica</a></li>
+                <li><a href="./tubulacoes.html"><i class="fas fa-water"></i>Tubulações</a></li>
               </ul>
-          </li>
-          <li><a href="admin/index.php">Login</a></li>
+            </li>
+            <li class="dropdown">
+              <a href="#"><i class="fas fa-hard-hat"></i>Trabalho Civil<i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-submenu">
+                <li><a href="./TrabalhoCivil/Alvenaria.html"><i class="fas fa-building"></i>Alvenaria</a></li>
+                <li><a href="./TrabalhoCivil/BaseEstrutural.html"><i class="fas fa-layer-group"></i>Base Estrutural</a></li>
+                <li><a href="./TrabalhoCivil/Pintura.html"><i class="fas fa-paint-roller"></i>Pintura</a></li>
+                <li><a href="./TrabalhoCivil/PisoEstrutural.html"><i class="fas fa-border-all"></i>Piso Estrutural</a></li>
+                <li><a href="./TrabalhoCivil/Montagemandaime.html"><i class="fas fa-cubes"></i>Montagem Andaime</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="clientes.html"><i class="fas fa-users"></i>Clientes</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-globe"></i>Localização<i class="fas fa-chevron-down"></i></a>          <ul class="dropdown-menu">
+            <li><a href="./contato.html"><i class="fas fa-paper-plane"></i>Localização</a></li>
+            <li><a href="./trabalhe.html"><i class="fas fa-briefcase"></i>Trabalhe Conosco</a></li>
+          </ul>
+        </li>
+        <li><a href="admin/index.php" class="login-btn"><i class="fas fa-user"></i>Login</a></li>
+      </ul>
+    </div>
+  </nav>
 
-        </ul>
-    </nav>
+    <!-- Banner Principal -->
+    <section class="home-highlight wrapper">
+      <div class="banner-overlay"></div>
+      <div class="banner-slide">
+        <img src="imagem/image.png" alt="WB Manutenção" class="banner-image">
+        <div class="banner-content">
+          <h1>Excelência em<br>Manutenção Industrial</h1>
+          <p>Soluções completas e inovadoras para sua indústria.<br>Qualidade e eficiência em cada projeto.</p>
+          <div class="banner-buttons">
+            <a href="#contato" class="banner-btn primary">
+              <i class="fas fa-envelope"></i>
+              Entre em Contato
+            </a>
+            <a href="empresa.html" class="banner-btn secondary">
+              <i class="fas fa-building"></i>
+              Conheça-nos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  </header>
 
-  <section class="home-highlight wrapper">
-    <div id="wbslider" class="owl-carousel">
-      <div>
-        <a href="#">
-          <img src="imagem/PAGINA INICIAL/highlight.png" alt="">
+  <!-- Áreas de Negócio -->
+  <section class="home-business">
+    <div class="section-header">
+      <span class="section-badge">Nossos Serviços</span>
+      <h2 class="section-title">Áreas de Atuação</h2>
+      <div class="section-divider"></div>
+    </div>
+    
+    <div class="business-container">
+      <div class="business-item">
+        <a href="./automacaoindustrial.html">
+          <div class="business-image">
+            <img src="imagem/automacaoIdustrial.webp" alt="Automação Industrial">
+          </div>
+          <div class="business-content">
+            <i class="fas fa-robot"></i>
+            <h3>Automação Industrial</h3>
+            <p>Soluções inteligentes para sua indústria</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="business-item">
+        <a href="./baixamediatensao.html">
+          <div class="business-image">
+            <img src="imagem/baixaEmedia.jpg" alt="Baixa e Média Tensão">
+          </div>
+          <div class="business-content">
+            <i class="fas fa-bolt"></i>
+            <h3>Baixa e Média Tensão</h3>
+            <p>Instalações elétricas profissionais</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="business-item">
+        <a href="./paineiseletricos.html">
+          <div class="business-image">
+            <img src="imagem/painelEletrico.jpg" alt="Painéis Elétricos">
+          </div>
+          <div class="business-content">
+            <i class="fas fa-server"></i>
+            <h3>Painéis Elétricos</h3>
+            <p>Montagem e manutenção especializada</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="business-item">
+        <a href="./tubulacoes.html">
+          <div class="business-image">
+            <img src="imagem/incendioTubulacao.jpg" alt="Tubulações">
+          </div>
+          <div class="business-content">
+            <i class="fas fa-water"></i>
+            <h3>Tubulações</h3>
+            <p>Sistemas hidráulicos e industriais</p>
+          </div>
         </a>
       </div>
     </div>
   </section>
 
-  <section class="wrapper home-business">
-    <h2 class="font-h1">Áreas de Negócio</h2>
-    <div class="business-container">
-      <section class="business-item">
-        <a href="./automacaoindustrial.html">
-          <img src="imagem/automacaoIdustrial.webp" alt="Automação Industrial">
-          <div class="overlay">
-            <h1>Automação Industrial</h1>
+  <!-- Seção Empresa com Design Moderno -->
+  <section class="section-empresa">
+    <div class="content-container">
+      <div class="leftCol animate-on-scroll">
+        <div class="empresa-content">
+          <div class="section-header-wrapper">
+            <span class="section-badge">Nossa História</span>
+            <h2 class="section-title">Excelência em Serviços Industriais</h2>
+            <div class="section-divider"></div>
           </div>
-        </a>
-      </section>
-      <section class="business-item">
-        <a href="./baixamediatensao.html">
-          <img src="imagem/baixaEmedia.jpg" alt="Baixa e Média Tensão">
-          <div class="overlay">
-            <h1>Baixa e Média Tensão</h1>
+          <p class="section-description">Há mais de 15 anos, somos referência em soluções industriais, combinando expertise técnica com inovação. Nossa equipe altamente qualificada está comprometida em entregar resultados excepcionais em cada projeto.</p>
+          
+          <div class="features-grid">
+            <div class="feature-item hover-effect">
+              <div class="feature-icon pulse">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <div class="feature-content">
+                <h3>Qualidade Garantida</h3>
+                <p>Comprometimento com a excelência em cada detalhe do serviço</p>
+              </div>
+            </div>
+            <div class="feature-item hover-effect">
+              <div class="feature-icon pulse">
+                <i class="fas fa-users-gear"></i>
+              </div>
+              <div class="feature-content">
+                <h3>Equipe Especializada</h3>
+                <p>Profissionais altamente capacitados e certificados</p>
+              </div>
+            </div>
+            <div class="feature-item hover-effect">
+              <div class="feature-icon pulse">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <div class="feature-content">
+                <h3>Soluções Personalizadas</h3>
+                <p>Projetos adaptados às necessidades específicas de cada cliente</p>
+              </div>
+            </div>
           </div>
-        </a>
-      </section>
-      <section class="business-item">
-        <a href="./paineiseletricos.html">
-          <img src="imagem/painelEletrico.jpg" alt="Painéis Elétricos">
-          <div class="overlay">
-            <h1>Painéis Elétricos</h1>
+        </div>
+      </div>
+      
+      <div class="rightCol animate-on-scroll">
+        <div class="image-wrapper glass-effect">
+          <img src="admin/imagem/logo.png" alt="WB Manutenção - Nossa História" class="empresa-image">
+          <div class="image-overlay gradient-overlay"></div>
+          <div class="experience-badge floating">
+            <div class="badge-content">
+              <span class="years counter">15</span>
+              <span class="plus">+</span>
+              <span class="text">Anos de<br>Experiência</span>
+            </div>
           </div>
-        </a>
-      </section>
-      <section class="business-item">
-        <a href="./tubulacoes.html">
-          <img src="imagem/incendioTubulacao.jpg" alt="Tubulações">
-          <div class="overlay">
-            <h1>Tubulações</h1>
+          <div class="stats-container">
+            <div class="stat-item glass-effect">
+              <span class="stat-number counter">500</span>
+              <span class="plus">+</span>
+              <span class="stat-text">Projetos<br>Realizados</span>
+            </div>
+            <div class="stat-item glass-effect">
+              <span class="stat-number">100</span>
+              <span class="percent">%</span>
+              <span class="stat-text">Satisfação<br>Garantida</span>
+            </div>
           </div>
-        </a>
-      </section>
+        </div>
+        
+        <div class="certifications glass-effect">
+          <h4>Nossas Certificações</h4>
+          <div class="cert-grid">
+            <div class="cert-item hover-effect">
+              <div class="cert-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <span>ISO 9001:2015</span>
+            </div>
+            <div class="cert-item hover-effect">
+              <div class="cert-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <span>NR-10</span>
+            </div>
+            <div class="cert-item hover-effect">
+              <div class="cert-icon">
+                <i class="fas fa-hard-hat"></i>
+              </div>
+              <span>NR-35</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 WB Manutenção | Todos os direitos reservados.</p>
-    <br>
+  <!-- Seção Contato Modernizada -->
+  <section id="contato" class="section-contato">
+    <div class="content-container">
+      <div class="leftCol animate-on-scroll">
+        <span class="section-badge light">Contato</span>
+        <h2 class="section-title">Entre em Contato</h2>
+        <div class="section-divider light"></div>
+        
+        <div class="contato-info">
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-content">
+              <h3>Endereço</h3>
+              <p>R. João Silva, 3498, 79645-010</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="info-content">
+              <h3>Telefone</h3>
+              <p>(67) 3522-7228</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-content">
+              <h3>E-mail</h3>
+              <p>contato@wbmanutencao.com.br</p>
+            </div>
+          </div>
+        </div>
 
-    <a href="http://www.sitefy.com.br" style="display: inline-block; margin-right: 7px;">
-        <img src="imagem/sitefy.png" alt="Sitefy" style="width: 50px;">
-    </a>
+        <div class="social-media">
+          <h3>Siga-nos</h3>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
 
-    <a href="https://wa.me/556799299440" style="display: inline-block;">
-        <img src="./imagem/whatsapp.png" alt="Iconi" style="width: 30px;">
-    </a>
-    <br><br>
-    <a href="https://www.google.com/search?q=R.+Jo%C3%A3o+Silva%2C+3498%2C+79645-010&oq=R.+Jo%C3%A3o+Silva%2C+3498%2C+79645-010&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABiABBiiBDIKCAIQABiABBiiBDIKCAMQABiABBiiBDIKCAQQABiABBiiBDIKCAUQABiABBiiBNIBBzU5NGowajSoAgCwAgE&sourceid=chrome&ie=UTF-8">
-        <p>R. João Silva, 3498, 79645-010 </p>
-        <a href="">
-            <img src="imagem/telephone.png" alt="WhatsApp" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 3px;">
-            (67) 3522-7228
-        </a>
-    </a>
-</footer>
+      <div class="rightCol animate-on-scroll">
+        <div class="contact-card">
+          <form class="contato-form">
+            <div class="form-header">
+              <h3>Envie sua mensagem</h3>
+              <p>Responderemos o mais breve possível</p>
+            </div>
+            
+            <div class="form-group">
+              <div class="input-wrapper">
+                <i class="fas fa-user input-icon"></i>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+              </div>
+            </div>
 
-<!-- Ícone do WhatsApp na parte inferior esquerda -->
-<a class="whatsapp-link" href="https://api.whatsapp.com/send/?phone=556799299440" target="_blank" style="position: fixed; left: 20px; bottom: 20px;">
-    <img src="imagem/whatsapp.png" alt="WhatsApp" style="width: 60px; height: 60px;">
-</a>
+            <div class="form-group">
+              <div class="input-wrapper">
+                <i class="fas fa-envelope input-icon"></i>
+                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+              </div>
+            </div>
 
-<script src="assets/js/jquery-1.11.3.min.js"></script>
-<script src="assets/js/jquery.collapse.js"></script>
-<script src="assets/js/jquery.slicknav.min.js"></script>
-<script src="assets/js/main.js"></script>
+            <div class="form-group">
+              <div class="input-wrapper">
+                <i class="fas fa-comment input-icon"></i>
+                <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" id="enviar-btn">
+              <i class="fas fa-paper-plane"></i>
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Footer Modernizado -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="imagem/image.png" alt="WB Manutenção" class="footer-logo">
+            <p class="footer-description">Excelência em manutenção industrial desde 2008. Comprometidos com qualidade e inovação em todos os serviços.</p>
+            <div class="social-media">
+              <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Links Rápidos</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="empresa.html">Empresa</a></li>
+              <li><a href="clientes.html">Clientes</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-contact">
+            <h3>Contato</h3>
+            <div class="contact-info">
+              <a href="tel:6735227228" class="footer-info-item">
+                <i class="fas fa-phone"></i>
+                <span>(67) 3522-7228</span>
+              </a>
+              <a href="https://wa.me/556799299440" class="footer-info-item">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+              </a>
+              <a href="mailto:contato@wbmanutencao.com.br" class="footer-info-item">
+                <i class="fas fa-envelope"></i>
+                <span>contato@wbmanutencao.com.br</span>
+              </a>
+            </div>
+          </div>
+  
+          <div class="footer-address">
+            <h3>Localização</h3>
+            <a href="https://www.google.com/maps/search/?q=R.+João+Silva,+3498,+79645-010" 
+               target="_blank" 
+               class="address-link">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="address-text">
+                <p>R. João Silva, 3498</p>
+                <p>79645-010</p>
+              </div>
+            </a>
+          </div>
+        </div>
+  
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            <p>&copy; 2025 WB Manutenção | Todos os direitos reservados</p>
+          </div>
+          <div class="footer-developer">
+            <span>Ajuda e Suporte por:</span>
+            <a href="http://www.sitefy.com.br" target="_blank">
+              <img src="imagem/sitefy.png" alt="Sitefy">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  <!-- WhatsApp Flutuante -->
+  <a class="whatsapp-link" href="https://api.whatsapp.com/send/?phone=556799299440" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
+  <script src="assets/js/jquery.collapse.js"></script>
+  <script src="assets/js/jquery.slicknav.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Script de Animação -->
+  <script>
+    // Função para controlar a navbar durante a rolagem
+    function handleNavbarScroll() {
+      const nav = document.querySelector('nav');
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+
+    // Função para destacar o item do menu ativo
+    function setActiveMenuItem() {
+      const sections = document.querySelectorAll('section');
+      const navItems = document.querySelectorAll('nav ul li a');
+      
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop - 150) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href').includes(current)) {
+          item.classList.add('active');
+        }
+      });
+    }
+
+    // Função para animação suave ao clicar nos links do menu
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Observador de interseção para animações de entrada
+    const navObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('nav-visible');
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    // Aplicar observador aos itens do menu
+    document.querySelectorAll('nav ul li').forEach(item => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(-20px)';
+      navObserver.observe(item);
+    });
+
+    // Event listeners
+    window.addEventListener('scroll', () => {
+      handleNavbarScroll();
+      setActiveMenuItem();
+    });
+    window.addEventListener('load', () => {
+      handleNavbarScroll();
+      setActiveMenuItem();
+    });
+
+    function checkScroll() {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementTop < windowHeight * 0.85) {
+          element.classList.add('visible');
+          
+          // Inicia a animação dos contadores quando visíveis
+          element.querySelectorAll('.counter').forEach(counter => {
+            if (!counter.classList.contains('counted')) {
+              animateCounter(counter);
+              counter.classList.add('counted');
+            }
+          });
+        }
+      });
+    }
+
+    function animateCounter(counter) {
+      const target = parseInt(counter.textContent);
+      let current = 0;
+      const increment = target / 50; // Ajuste para velocidade da animação
+      const duration = 2000; // Duração total em ms
+      const stepTime = duration / 50;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          counter.textContent = target;
+          clearInterval(timer);
+        } else {
+          counter.textContent = Math.floor(current);
+        }
+      }, stepTime);
+    }
+
+    // Adiciona classes de animação aos elementos quando visíveis
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          if (entry.target.classList.contains('feature-item')) {
+            entry.target.style.transitionDelay = `${entry.target.dataset.delay}ms`;
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.feature-item').forEach((item, index) => {
+      item.dataset.delay = index * 200;
+      observer.observe(item);
+    });
+
+    window.addEventListener('load', checkScroll);
+    window.addEventListener('scroll', checkScroll);
+
+    // Mobile menu
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuBtn = document.querySelector('.slicknav_btn');
+      const mobileMenu = document.querySelector('.slicknav_nav');
+      
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+          mobileMenu.classList.toggle('show');
+          this.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+
+  <!-- Otimizações JavaScript -->
+  <script src="/assets/js/optimizations.js" type="module" defer></script>
+  <script>
+    // Service Worker Registration
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('ServiceWorker registrado com sucesso');
+          })
+          .catch(err => {
+            console.log('Erro no registro do ServiceWorker: ', err);
+          });
+      });
+    }
+    
+    // Lazy Loading para imagens
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+      
+      images.forEach(img => imageObserver.observe(img));
+    });
+  </script>
+
+  <!-- Google Analytics (substitua pelo seu ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
 </body>
 </html>
